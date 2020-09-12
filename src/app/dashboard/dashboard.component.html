@@ -1,0 +1,41 @@
+  <h2>Dashboard</h2>
+<div class='layout-container'>
+<table class='layout'>
+  <thead>
+  <tr class='heading'>
+    <th class='col'>
+      Customer Name
+    </th>
+    <th class='col'>
+      No. of items ordered
+    </th>
+    <th class='col'>
+      Total Amount of Order
+    </th>
+    <th class='col'>
+      Order status
+    </th>
+  </tr>
+</thead>
+<tbody>
+  <tr class='details' *ngFor='let orderDetails of orderDetailsList; let i=index' (click)='viewOrderDetails(orderDetails.orderId)'>
+    <td class='col'>
+      {{orderDetails.customerName}}
+    </td>
+    <td class='col'>
+      {{orderDetails.totalItems}}
+    </td>
+    <td class='col'>
+      {{orderDetails.totalAmount | number:'1.0-0'}}
+    </td>
+    <td class='col'>
+      {{orderStatusMapping[orderDetails.status]}}
+    </td>
+    <td class='col'>
+      <button class='status-button' [disabled]='orderDetails.status === 3' (click)='updateOrderStatus(i, orderDetails.status);$event.stopPropagation()'>Change Status</button>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+

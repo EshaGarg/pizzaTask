@@ -1,0 +1,54 @@
+.back {
+    float: right;
+    height: 30px;
+    background: antiquewhite;
+    border-radius: 6px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center
+}
+
+.content {
+    width: 90%;
+    border: 3px solid grey;
+    margin-left: 1%;
+    padding: 4%;
+}
+
+.customer-details {
+    background: antiquewhite;
+    padding: 10px;
+}
+
+.details {
+    margin: 10px
+}
+
+.price-details {
+    background: antiquewhite;
+    float: right;
+    font-size: 18px;
+    padding: 6px;
+}
+
+table {
+    width: 60%
+}
+
+.values {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.items-container {
+    margin: 25px 0;
+    text-align: center;
+    border: 2px dashed antiquewhite;
+}
+
+.th {
+    padding: 5px 0;
+}

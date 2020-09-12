@@ -1,0 +1,50 @@
+<div>
+<button class='back' (click)='goBack()'> << Back</button>
+<h2>
+  Order Details
+</h2>
+<div class='content'>
+  <div class='customer-details'>
+<div class='details'>
+  Customer Name: <span class='values'>{{orderDetails?.customerName}}</span>
+</div>
+<div class='details'>
+  Deliver Address: <span class='values'>{{orderDetails?.deliveryAddress}}</span>
+</div>
+</div>
+<div class='items-container'>
+  <table>
+    <thead>
+        <tr class='flex'>
+            <th>
+
+            </th>
+            <th>
+              Items
+            </th>
+            <th>
+              Price
+            </th>
+          </tr>
+    </thead>
+    <tbody>
+    <tr class='flex' *ngFor='let item of orderDetails?.items; let i=index'>
+      <td>
+        {{i+1}}.
+      </td>
+      <td> 
+        {{item?.itemName}}
+      </td>
+      <td>
+        {{item?.itemPrice | number}}
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<div class='price-details'>
+  Total Price: 
+  <span class='values'>{{orderDetails?.totalPrice | number:'1.0-0'}}</span>
+</div>
+</div>
+</div>
